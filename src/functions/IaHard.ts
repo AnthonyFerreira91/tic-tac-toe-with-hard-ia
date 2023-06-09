@@ -2,52 +2,32 @@ export function IaHard(grid: string[], mark: string) {
 	
 	if(mark === 'x') {
 		if(grid.filter(el => el !== null).length === 1) {
-			if(grid[0] === "x") {
-				const tabBestSecondPick = [4,8];
-				const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
-				return tabBestSecondPick[randomBestSecondPick]
-			}
-			if(grid[2] === "x") {
-				const tabBestSecondPick = [4,6];
-				const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
-				return tabBestSecondPick[randomBestSecondPick]
-			}
-			if(grid[6] === "x") {
-				const tabBestSecondPick = [4,2];
-				const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
-				return tabBestSecondPick[randomBestSecondPick]
-			}
-			if(grid[8] === "x") {
-				const tabBestSecondPick = [4,0];
-				const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
-				return tabBestSecondPick[randomBestSecondPick]
-			}
 			if(grid[4] === "x") {
 				const tabBestFirstPick = [0,2,6,8];
 				const randomBestFirstPick = Math.floor(Math.random() * (tabBestFirstPick.length - 0));
 				return tabBestFirstPick[randomBestFirstPick]
 			}
 			if(grid[1] === "x") {
-				const tabBestFirstPick = [0,2];
+				const tabBestFirstPick = [0,2,7];
 				const randomBestFirstPick = Math.floor(Math.random() * (tabBestFirstPick.length - 0));
 				return tabBestFirstPick[randomBestFirstPick]
 			}
 			if(grid[3] === "x") {
-				const tabBestFirstPick = [0,6];
+				const tabBestFirstPick = [0,5,6];
 				const randomBestFirstPick = Math.floor(Math.random() * (tabBestFirstPick.length - 0));
 				return tabBestFirstPick[randomBestFirstPick]
 			}
 			if(grid[5] === "x") {
-				const tabBestFirstPick = [2,8];
+				const tabBestFirstPick = [2,3,8];
 				const randomBestFirstPick = Math.floor(Math.random() * (tabBestFirstPick.length - 0));
 				return tabBestFirstPick[randomBestFirstPick]
 			}
 			if(grid[7] === "x") {
-				const tabBestFirstPick = [6,8];
+				const tabBestFirstPick = [1,6,8];
 				const randomBestFirstPick = Math.floor(Math.random() * (tabBestFirstPick.length - 0));
 				return tabBestFirstPick[randomBestFirstPick]
 			}
-			return null
+			return 4
 		}
 		if(grid.filter(el => el !== null).length === 3) {
 			if(grid[0] === 'x' && grid[4] === "x") {
