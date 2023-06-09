@@ -1,0 +1,69 @@
+.containerNewGame {
+	align-self: center;
+	margin: 0 auto;
+	@include flex($align: center, $direction: column, $gap: 3.2rem);
+	width: min(90vw, 46rem);
+	height: 42.9rem;
+}
+
+.pickContainer {
+	@include flex($align: center, $direction: column);
+	background: $backgroundSecondaryColor;
+	width: 100%;
+	height: 20.5rem;
+	border-radius: 15px;
+	box-shadow: inset 0px -8px 0px $backgroundShadowColor;
+
+	h4 {
+		margin: 2.4rem 0;
+		@extend %HeadingXS;
+	}
+
+	&__mark {
+		@include flex($align: center);
+		background: $backgroundMainColor;
+		width: 90%;
+		height: 7.2rem;
+		margin-bottom: 1.7rem;
+		padding: 0.9rem 0.8rem;
+		border-radius: 10px;
+		position: relative;
+
+		#x, #o {
+			flex-grow: 1;
+			@include flex($justify: center, $align: center);
+			
+			svg {
+				fill: $backgroundMainColor;
+				z-index: 1;
+			}
+
+			&.inactive {
+				cursor: pointer;
+
+				svg {
+					fill: $neutralColor;
+				}
+			}
+		}
+		&--cursor {
+			background: $neutralColor;
+			position: absolute;
+			width: 47.5%;
+			height: 75%;
+			border-radius: 10px;
+		}
+	}
+
+	p {
+		opacity: 0.5;
+	}
+}
+
+.containerBtnVs {
+	@include flex($direction: column, $gap: 1.6rem);
+	width: 100%;
+}
+
+
+

@@ -1,0 +1,43 @@
+%Heading {
+	font-weight: 700;
+}
+
+%HeadingL {
+	font-size: 4rem;
+	font-kerning: 0.25rem;
+	line-height: 5rem;
+	letter-spacing: 0.25rem;
+	@extend %Heading;
+}
+
+%HeadingM {
+	font-size: 2.4rem;
+	font-kerning: 0.15rem;
+	line-height: 3rem;
+	letter-spacing: 0.15rem;
+	@extend %Heading;
+}
+
+%HeadingS {
+	font-size: 2rem;
+	font-kerning: 0.125rem;
+	line-height: 2.5rem;
+	letter-spacing: 0.125rem;
+	@extend %Heading;
+}
+
+%HeadingXS {
+	font-size: 1.6rem;
+	font-kerning: 0.1rem;
+	line-height: 2rem;
+	letter-spacing: 0.1rem;
+	@extend %Heading;
+}
+
+%Body {
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-kerning: 0.08rem;
+	line-height: 1.8rem;
+	letter-spacing: 0.0875rem;
+}

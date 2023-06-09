@@ -1,0 +1,21 @@
+svg[name="x"] {
+	fill: $mainColor;
+}
+
+svg[name="o"] {
+	fill: $secondaryColor;
+}
+
+svg[name="xOutline"] {
+	fill: transparent;
+	stroke: $mainColor;
+}
+
+svg[name="oOutline"] {
+	fill: transparent;
+	stroke: $secondaryColor;
+}
+
+svg[name="retry"] {
+	fill: $backgroundSecondaryColor;
+}

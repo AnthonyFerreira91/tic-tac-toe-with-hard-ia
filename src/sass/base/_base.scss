@@ -1,0 +1,21 @@
+* {
+	font-family: 'Outfit', sans-serif;
+	text-transform: uppercase;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+#root {
+	@include flex;
+	height: 100vh;
+	background: $backgroundMainColor;
+	@extend %Body;
+	color: $neutralColor;
+}
+
+.logo {
+	width: 7.2rem;
+	height: 3.2rem;
+}
