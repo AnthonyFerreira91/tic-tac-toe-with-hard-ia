@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![myScreenshot](./screenshot.jpg)
+![myScreenshot]([./screenshot.jpg](https://github.com/Matrixfrpro33/tic-tac-toe-with-hard-ia/blob/098a31df1a4bccd0ee4af6d6a0a24a7550788d73/screenshot%20-%20Tic%20Tac%20Toe.png))
 
 ### Links
 
