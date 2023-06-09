@@ -73,9 +73,6 @@ export function IaHard(grid: string[], mark: string) {
 					}
 					return 0
 				}
-				if(grid[0] === "x" && grid[8] === "o" || grid[8] === "x" && grid[0] === "o") {
-					return 4
-				}
 			}
 			if(grid[2] === "x" || grid[6] === "x") {
 				if(grid[0] === "o" || grid[8] === "o" || grid[4] === "o") {
@@ -84,11 +81,13 @@ export function IaHard(grid: string[], mark: string) {
 					}
 					return 2
 				}
-				if(grid[2] === "x" && grid[6] === "o" || grid[6] === "x" && grid[2] === "o") {
-					return 4
-				}
 			}
 			if(grid[0] === "x") {
+				if(grid[8] === "o") {
+					const tabBestSecondPick = [2,6];
+					const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
+					return tabBestSecondPick[randomBestSecondPick]
+				}
 				if(grid[3] === "o" || grid[5] === "o") {
 					return 2
 				}
@@ -97,6 +96,11 @@ export function IaHard(grid: string[], mark: string) {
 				}
 			}
 			if(grid[2] === "x") {
+				if(grid[6] === "o") {
+					const tabBestSecondPick = [0,8];
+					const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
+					return tabBestSecondPick[randomBestSecondPick]
+				}
 				if(grid[3] === "o" || grid[5] === "o") {
 					return 0
 				}
@@ -105,6 +109,11 @@ export function IaHard(grid: string[], mark: string) {
 				}
 			}
 			if(grid[6] === "x") {
+				if(grid[2] === "o") {
+					const tabBestSecondPick = [0,8];
+					const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
+					return tabBestSecondPick[randomBestSecondPick]
+				}
 				if(grid[3] === "o" || grid[5] === "o") {
 					return 8
 				}
@@ -113,6 +122,11 @@ export function IaHard(grid: string[], mark: string) {
 				}
 			}
 			if(grid[8] === "x") {
+				if(grid[0] === "o") {
+					const tabBestSecondPick = [2,6];
+					const randomBestSecondPick = Math.floor(Math.random() * (tabBestSecondPick.length - 0));
+					return tabBestSecondPick[randomBestSecondPick]
+				}
 				if(grid[3] === "o" || grid[5] === "o") {
 					return 6
 				}
@@ -133,6 +147,38 @@ export function IaHard(grid: string[], mark: string) {
 					return 8
 				}
 				return 0
+			}
+			if(grid[0] === 'x' && grid[8] === 'o') {
+				if(grid[2] === 'x') {
+					return 6
+				}
+				if(grid[6] === 'x') {
+					return 2
+				}
+			}
+			if(grid[2] === 'x' && grid[6] === 'o') {
+				if(grid[0] === 'x') {
+					return 8
+				}
+				if(grid[8] === 'x') {
+					return 0
+				}
+			}
+			if(grid[6] === 'x' && grid[2] === 'o') {
+				if(grid[0] === 'x') {
+					return 8
+				}
+				if(grid[8] === 'x') {
+					return 0
+				}
+			}
+			if(grid[8] === 'x' && grid[0] === 'o') {
+				if(grid[2] === 'x') {
+					return 6
+				}
+				if(grid[6] === 'x') {
+					return 2
+				}
 			}
 			if(grid[4] === null) {
 				return 4
